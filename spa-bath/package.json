@@ -1,0 +1,10 @@
+{
+  "name": "spa-bath",
+  "version": "0.0.0",
+  "description": "spa-bath",
+  "main": "server.js",
+  "author": {
+    "name": "dawg",
+    "email": ""
+  }
+}
