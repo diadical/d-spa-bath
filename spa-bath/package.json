@@ -3,8 +3,25 @@
   "version": "0.0.0",
   "description": "spa-bath",
   "main": "server.js",
-  "author": {
-    "name": "dawg",
-    "email": ""
+  "author": "Diwas Adhikary",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diadical/d-spa-bath.git"
+  },
+  "keywords": [
+    "SPA",
+    "javascript"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diadical/d-spa-bath/issues"
+  },
+  "homepage": "https://github.com/diadical/d-spa-bath#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-live-server": "0.0.27"
   }
 }

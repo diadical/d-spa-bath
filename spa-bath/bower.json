@@ -1,0 +1,17 @@
+{
+  "name": "d-spa-bath",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bignumber.js": "~2.0.7",
+    "Durandal": "durandal#~2.1.0",
+    "knockout": "~3.3.0",
+    "knockout-editables": "*",
+    "knockout-validation": "~2.0.3"
+  }
+}
