@@ -21,7 +21,10 @@
   },
   "homepage": "https://github.com/diadical/d-spa-bath#readme",
   "devDependencies": {
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1",
     "gulp": "^3.9.0",
+    "gulp-durandal": "^1.1.7",
     "gulp-live-server": "0.0.27"
   }
 }

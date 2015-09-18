@@ -30,8 +30,23 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="applications\demo\main.js" />
+    <Compile Include="applications\demo\viewmodels\flickr.js" />
+    <Compile Include="applications\demo\viewmodels\flickr.js" />
+    <Compile Include="applications\demo\viewmodels\shell.js" />
+    <Compile Include="applications\demo\viewmodels\shell.js" />
+    <Compile Include="applications\demo\viewmodels\welcome.js" />
+    <Compile Include="applications\demo\viewmodels\welcome.js" />
     <Compile Include="gulpfile.js" />
     <Compile Include="server.js" />
+    <Content Include="applications\demo\views\detail.html" />
+    <Content Include="applications\demo\views\detail.html" />
+    <Content Include="applications\demo\views\flickr.html" />
+    <Content Include="applications\demo\views\flickr.html" />
+    <Content Include="applications\demo\views\shell.html" />
+    <Content Include="applications\demo\views\shell.html" />
+    <Content Include="applications\demo\views\welcome.html" />
+    <Content Include="applications\demo\views\welcome.html" />
     <Content Include="bower.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
@@ -39,6 +54,8 @@
   <ItemGroup>
     <Folder Include="applications\" />
     <Folder Include="applications\demo\" />
+    <Folder Include="applications\demo\viewmodels\" />
+    <Folder Include="applications\demo\views\" />
     <Folder Include="framework\" />
     <Folder Include="framework\components\" />
     <Folder Include="framework\ui\" />

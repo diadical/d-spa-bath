@@ -9,9 +9,16 @@
   ],
   "dependencies": {
     "bignumber.js": "~2.0.7",
+    "blueimp-file-upload": "jquery-file-upload#~9.11.2",
     "Durandal": "durandal#~2.1.0",
+    "fastclick": "~1.0.6",
+    "fingerprint": "~0.5.4",
+    "jquery": "~2.1.4",
     "knockout": "~3.3.0",
     "knockout-editables": "*",
-    "knockout-validation": "~2.0.3"
+    "knockout-validation": "~2.0.3",
+    "moment": "~2.10.6",
+    "sjcl": "~1.0.3",
+    "typeahead.js": "~0.11.1"
   }
 }

@@ -1,26 +1,50 @@
 ﻿// gulp and plugins
 var gulp = require('gulp'),
-    gls = require('gulp-live-server');
+    gls = require('gulp-live-server'),
+    durandal = require('gulp-durandal');
 
 gulp.task('default', function () {
     console.log('hello!');
 });
 
-gulp.task('serve', function () {
-    //1. serve with default settings
-    var server = gls.static(); //equals to gls.static('public', 3000);
+gulp.task('assets', function() {
+  
+});
+
+gulp.task('durandal', function () {
+    var app = 'demo';
+
+    return durandal({
+        baseDir: 'applications/' + app,
+        main: 'main.js',
+        output: app + '.js',
+        almond: true,
+        minify: false,
+        rjsConfigAdapter: function (rjsConfig) {
+            rjsConfig.paths = {
+                // r.js text plugin
+                'text': '../../bower_components/requirejs-text/text',
+                // durandal
+                'durandal': '../../bower_components/Durandal/js',
+                'plugins': '../../bower_components/Durandal/js/plugins',
+                'transitions': '../../bower_components/Durandal/js/transitions',
+                // vendor
+                'jquery': 'empty:',
+                'knockout': 'empty:',
+                'q': 'empty:'
+            }
+            return rjsConfig;
+        }
+    }).pipe(gulp.dest('dist/apps/' + app + '.js'));
+});
+
+gulp.task('serve', ['durandal'], function () {
+    var app = 'demo',
+        server = gls(['server.js', app]);
     server.start();
-    
-    //2. serve at custom port
-    //var server = gls.static(['dist'], 19000);
-    //server.start();
-    
-    //3. serve multi folders
-    //var server = gls.static(['dist', '.tmp']);
-    //server.start();
-    
-    //use gulp.watch to trigger server actions(notify, start or stop)
-    gulp.watch(['static/**/*.css', 'static/**/*.html'], function (file) {
-        server.notify.apply(server, [file]);
+    gulp.watch('applications/' + app + '/**/*', [
+        'durandal'
+    ]).on('change', function (file) {
+        server.notify([file]);
     });
 });
